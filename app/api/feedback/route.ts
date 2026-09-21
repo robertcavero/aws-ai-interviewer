@@ -1,10 +1,10 @@
 import { NextResponse } from "next/server";
 import OpenAI from "openai";
 
-const openai = new OpenAI();
 
 export async function POST(req: Request) {
   try {
+    const openai = new OpenAI();
     const { chatHistory, lang } = await req.json();
 
     const completion = await openai.chat.completions.create({

@@ -5,8 +5,6 @@ if (process.env.NODE_ENV === "development") {
   process.env.NODE_TLS_REJECT_UNAUTHORIZED = "0";
 }
 
-const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
-
 const LANG_NAMES: Record<string, string> = { pt: "Portuguese", es: "Spanish", en: "English" };
 
 type ChatMessage = {
@@ -16,6 +14,9 @@ type ChatMessage = {
 
 export async function POST(req: NextRequest) {
   try {
+
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
+
     const { jobDescription, chatHistory, lang = "pt" } = await req.json();
     const language = LANG_NAMES[lang] ?? "Portuguese";
 
