@@ -1,0 +1,76 @@
+export type Lang = "pt" | "es" | "en";
+
+export const translations = {
+  pt: {
+    appTitle: "Preparação para Entrevistas com IA",
+    appSubtitle: "Cole uma descrição de vaga e selecione o cargo desejado para iniciar uma entrevista simulada personalizada.",
+    jobDescriptionLabel: "Descrição da Vaga",
+    jobDescriptionPlaceholder: "Cole aqui a descrição completa da vaga...",
+    targetRoleLabel: "Cargo Desejado",
+    targetRolePlaceholder: "Selecione um cargo...",
+    languageLabel: "Idioma",
+    startButton: "Iniciar Entrevista →",
+    aiName: "Entrevistador IA",
+    live: "● Ao vivo",
+    questionOf: (current: number, total: number) => `Pergunta ${current} de ${total}`,
+    welcomeMessage: (total: number) =>
+      `Bem-vindo(a)! Serei seu entrevistador de IA hoje. Vamos começar.\n\nPergunta 1 de ${total}: Pode me contar sobre sua experiência relevante para esta vaga?`,
+    thankYou: (next: number, total: number) =>
+      `Obrigado pela sua resposta.\n\nPergunta ${next} de ${total}:`,
+    finishMessage: "Isso encerra nossa entrevista! Obrigado pelas suas respostas. Você receberá um feedback detalhado em breve. Boa sorte! 🎉",
+    inputPlaceholder: "Digite sua resposta… (Enter para enviar, Shift+Enter para nova linha)",
+    waitingPlaceholder: "Aguardando a IA...",
+    finishedPlaceholder: "Entrevista concluída",
+    connectionError: "Parece que perdi a conexão. Poderia repetir sua última resposta?",
+  },
+  es: {
+    appTitle: "Preparación para Entrevistas con IA",
+    appSubtitle: "Pega una descripción de trabajo y selecciona tu rol objetivo para comenzar una entrevista simulada personalizada.",
+    jobDescriptionLabel: "Descripción del Puesto",
+    jobDescriptionPlaceholder: "Pega aquí la descripción completa del puesto...",
+    targetRoleLabel: "Rol Objetivo",
+    targetRolePlaceholder: "Selecciona un rol...",
+    languageLabel: "Idioma",
+    startButton: "Iniciar Entrevista →",
+    aiName: "Entrevistador IA",
+    live: "● En vivo",
+    questionOf: (current: number, total: number) => `Pregunta ${current} de ${total}`,
+    welcomeMessage: (total: number) =>
+      `¡Bienvenido/a! Seré tu entrevistador de IA hoy. Empecemos.\n\nPregunta 1 de ${total}: ¿Puedes contarme sobre tu experiencia relevante para este puesto?`,
+    thankYou: (next: number, total: number) =>
+      `Gracias por tu respuesta.\n\nPregunta ${next} de ${total}:`,
+    finishMessage: "¡Eso concluye nuestra entrevista! Gracias por tus respuestas. Recibirás retroalimentación detallada pronto. ¡Buena suerte! 🎉",
+    inputPlaceholder: "Escribe tu respuesta… (Enter para enviar, Shift+Enter para nueva línea)",
+    waitingPlaceholder: "Esperando a la IA...",
+    finishedPlaceholder: "Entrevista completada",
+    connectionError: "Parece que perdí la conexión. ¿Podrías repetir tu última respuesta?",
+  },
+  en: {
+    appTitle: "AI Interview Prep",
+    appSubtitle: "Paste a job description and select your target role to begin a tailored mock interview.",
+    jobDescriptionLabel: "Job Description",
+    jobDescriptionPlaceholder: "Paste the full job description here...",
+    targetRoleLabel: "Target Role",
+    targetRolePlaceholder: "Select a role...",
+    languageLabel: "Language",
+    startButton: "Start Interview →",
+    aiName: "AI Interviewer",
+    live: "● Live",
+    questionOf: (current: number, total: number) => `Question ${current} of ${total}`,
+    welcomeMessage: (total: number) =>
+      `Welcome! I'll be your AI interviewer today. Let's get started.\n\nQuestion 1 of ${total}: Can you walk me through your experience relevant to this role?`,
+    thankYou: (next: number, total: number) =>
+      `Thank you for your answer.\n\nQuestion ${next} of ${total}:`,
+    finishMessage: "That wraps up our interview! Thank you for your thoughtful answers. You'll receive detailed feedback shortly. Good luck! 🎉",
+    inputPlaceholder: "Type your answer… (Enter to send, Shift+Enter for new line)",
+    waitingPlaceholder: "Waiting for AI...",
+    finishedPlaceholder: "Interview complete",
+    connectionError: "I seem to have lost my connection. Could you please repeat your last answer?",
+  },
+};
+
+export const LANGUAGE_NAMES: Record<Lang, string> = {
+  pt: "Português",
+  es: "Español",
+  en: "English",
+};
