@@ -22,6 +22,12 @@ export const translations = {
     waitingPlaceholder: "Aguardando a IA...",
     finishedPlaceholder: "Entrevista concluída",
     connectionError: "Parece que perdi a conexão. Poderia repetir sua última resposta?",
+    candidateAvatar: "Eu",
+    finalScore: (score: number) => `Pontuação Final: ${score}/10`,
+    strengthsTitle: "Principais Pontos Fortes",
+    weaknessesTitle: "Áreas de Melhoria",
+    tipsTitle: "Dicas de Estudo",
+    generatingFeedback: "Analisando decisões e gerando scorecard final...",
   },
   es: {
     appTitle: "Preparación para Entrevistas con IA",
@@ -44,6 +50,12 @@ export const translations = {
     waitingPlaceholder: "Esperando a la IA...",
     finishedPlaceholder: "Entrevista completada",
     connectionError: "Parece que perdí la conexión. ¿Podrías repetir tu última respuesta?",
+    candidateAvatar: "Yo",
+    finalScore: (score: number) => `Puntuación Final: ${score}/10`,
+    strengthsTitle: "Principales Fortalezas",
+    weaknessesTitle: "Áreas de Mejora",
+    tipsTitle: "Consejos de Estudio",
+    generatingFeedback: "Analizando decisiones y generando scorecard final...",
   },
   en: {
     appTitle: "AI Interview Prep",
@@ -66,6 +78,12 @@ export const translations = {
     waitingPlaceholder: "Waiting for AI...",
     finishedPlaceholder: "Interview complete",
     connectionError: "I seem to have lost my connection. Could you please repeat your last answer?",
+    candidateAvatar: "Me",
+    finalScore: (score: number) => `Final Score: ${score}/10`,
+    strengthsTitle: "Top Strengths",
+    weaknessesTitle: "Areas for Improvement",
+    tipsTitle: "Actionable Study Tips",
+    generatingFeedback: "Analyzing architecture decisions and generating final scorecard...",
   },
 };
 

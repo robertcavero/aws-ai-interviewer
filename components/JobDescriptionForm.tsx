@@ -71,7 +71,7 @@ export default function JobDescriptionForm() {
               value={jobDescription}
               onChange={(e) => setJobDescription(e.target.value)}
               placeholder={t.jobDescriptionPlaceholder}
-              rows={10}
+              rows={6}
               required
               className="w-full resize-none rounded-xl border border-slate-200 bg-slate-50 px-4 py-3 text-sm text-slate-800 placeholder-slate-400 outline-none transition focus:border-indigo-500 focus:bg-white focus:ring-2 focus:ring-indigo-100"
             />
