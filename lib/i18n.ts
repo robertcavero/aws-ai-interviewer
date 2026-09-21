@@ -4,6 +4,7 @@ export const translations = {
   pt: {
     appTitle: "Preparação para Entrevistas com IA",
     appSubtitle: "Cole uma descrição de vaga e selecione o cargo desejado para iniciar uma entrevista simulada personalizada.",
+    backToStart: "← Voltar ao Início",
     jobDescriptionLabel: "Descrição da Vaga",
     jobDescriptionPlaceholder: "Cole aqui a descrição completa da vaga...",
     targetRoleLabel: "Cargo Desejado",
@@ -32,6 +33,7 @@ export const translations = {
   es: {
     appTitle: "Preparación para Entrevistas con IA",
     appSubtitle: "Pega una descripción de trabajo y selecciona tu rol objetivo para comenzar una entrevista simulada personalizada.",
+    backToStart: "← Volver al Inicio",
     jobDescriptionLabel: "Descripción del Puesto",
     jobDescriptionPlaceholder: "Pega aquí la descripción completa del puesto...",
     targetRoleLabel: "Rol Objetivo",
@@ -60,6 +62,7 @@ export const translations = {
   en: {
     appTitle: "AI Interview Prep",
     appSubtitle: "Paste a job description and select your target role to begin a tailored mock interview.",
+    backToStart: "← Back to Start",
     jobDescriptionLabel: "Job Description",
     jobDescriptionPlaceholder: "Paste the full job description here...",
     targetRoleLabel: "Target Role",
