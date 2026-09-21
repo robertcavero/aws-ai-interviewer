@@ -4,7 +4,7 @@ import OpenAI from "openai";
 
 export async function POST(req: Request) {
   try {
-    const openai = new OpenAI();
+    const openai = new OpenAI({ apiKey: process.env.OPENAI_API_KEY });
     const { chatHistory, lang } = await req.json();
 
     const completion = await openai.chat.completions.create({
@@ -40,6 +40,9 @@ export async function POST(req: Request) {
     return NextResponse.json(feedback);
   } catch (error) {
     console.error("Feedback API Error:", error);
-    return NextResponse.json({ error: "Failed to generate feedback" }, { status: 500 });
+    return NextResponse.json(
+      { error: "Failed to generate feedback", detail: error instanceof Error ? error.message : String(error) }, 
+      { status: 500 }
+    );
   }
 }
