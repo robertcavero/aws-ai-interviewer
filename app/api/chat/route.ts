@@ -51,9 +51,9 @@ export async function POST(req: NextRequest) {
     const message = completion.choices[0].message.content;
     return NextResponse.json({ message });
   } catch (error) {
-    console.error("OpenAI Error:", error);
+    console.error("OpenAI Error:", JSON.stringify(error, Object.getOwnPropertyNames(error)));
     return NextResponse.json(
-      { error: "Failed to generate interview question" },
+      { error: "Failed to generate interview question", detail: error instanceof Error ? error.message : String(error) },
       { status: 500 },
     );
   }
