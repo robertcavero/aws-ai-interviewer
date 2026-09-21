@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { useSearchParams } from "next/navigation";
+import { useSearchParams, useRouter } from "next/navigation";
 import { type Lang, translations } from "@/lib/i18n";
 
 const TOTAL_QUESTIONS = 5;
@@ -25,6 +25,7 @@ export default function InterviewChat({
   jobDescription?: string;
 }) {
   const searchParams = useSearchParams();
+  const router = useRouter();
   const lang = (searchParams.get("lang") ?? "pt") as Lang;
   const t = translations[lang];
 
@@ -221,7 +222,7 @@ export default function InterviewChat({
 
             <div className="mt-10 flex justify-center border-t border-slate-200 pt-8">
               <button
-                onClick={() => window.location.reload()}
+                onClick={() => router.push("/")}
                 className="flex items-center gap-2 px-6 py-3 bg-slate-900 text-white text-sm font-medium rounded-xl hover:bg-slate-800 transition active:scale-95 shadow-sm"
               >
                 <svg
